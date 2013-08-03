@@ -53,22 +53,6 @@ static NSCalendarUnit const RDH_CALENDAR_UNITS[] = {
     return [self dateComponentsWithCalendar:[NSCalendar currentCalendar]];
 }
 
--(instancetype)dateOfStartOfDayUsingCalendar:(NSCalendar *)calendar
-{
-    // All components
-    NSCalendarUnit units = ~0;
-    // Then unset hour, minute and second
-    units ^= NSHourCalendarUnit;
-    units ^= NSMinuteCalendarUnit;
-    units ^= NSSecondCalendarUnit;
-    return [calendar dateFromComponents:[calendar components:units fromDate:self]];
-}
-
--(instancetype)dateOfStartOfDayUsingCurrentCalendar
-{
-    return [self dateOfStartOfDayUsingCalendar:[NSCalendar currentCalendar]];
-}
-
 @end
 
 @implementation NSDate (RDHDateAdjustment)
@@ -115,6 +99,22 @@ static BOOL RDHValidateSingleUnit(NSCalendarUnit unitToValidate)
 -(instancetype)dateByUsingCurrentCalendarToAddDateComponentsDictionary:(NSDictionary *)dict
 {
     return [self dateByUsingCalendar:[NSCalendar currentCalendar] toAddDateComponentsDictionary:dict];
+}
+
+-(instancetype)dateOfStartOfDayUsingCalendar:(NSCalendar *)calendar
+{
+    // All components
+    NSCalendarUnit units = ~0;
+    // Then unset hour, minute and second
+    units ^= NSHourCalendarUnit;
+    units ^= NSMinuteCalendarUnit;
+    units ^= NSSecondCalendarUnit;
+    return [calendar dateFromComponents:[calendar components:units fromDate:self]];
+}
+
+-(instancetype)dateOfStartOfDayUsingCurrentCalendar
+{
+    return [self dateOfStartOfDayUsingCalendar:[NSCalendar currentCalendar]];
 }
 
 @end
