@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "RDHDateAdjustment.h"
 
 int main(int argc, const char * argv[])
@@ -14,9 +15,16 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSDate *now = [NSDate date];
+        NSDate *date = [now dateByUsingCurrentCalendarToAdjustCalendarUnit:NSYearCalendarUnit withValue:1];
         
+        NSLog(@"%@ -> %@", now, date);
+        
+        date = [now dateByUsingCurrentCalendarToAddDateComponentsDictionary:@{
+                @(NSYearCalendarUnit) : @(1),
+                @(NSMonthCalendarUnit) : @(3)}];
+        
+        NSLog(@"%@ -> %@", now, date);
     }
     return 0;
 }

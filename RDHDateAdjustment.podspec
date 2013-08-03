@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version = '0.0.1'
   s.license = 'MIT'
  
-  s.summary = '.'
+  s.summary = 'Categories on NSDate to simplify date adjustment.'
   s.homepage = 'https://github.com/rhodgkins/RDHDateAdjustment'
   s.author = 'Rich Hodgkins'
   s.source = { :git => 'https://github.com/rhodgkins/RDHDateAdjustment.git', :tag => s.version.to_s }

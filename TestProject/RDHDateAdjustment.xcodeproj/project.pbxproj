@@ -12,8 +12,8 @@
 		4418E65717AD1BA6002EC32A /* RDHDateAdjustmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4418E65617AD1BA6002EC32A /* RDHDateAdjustmentTests.m */; };
 		4418E65E17AD1BDA002EC32A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4418E63317AD1ADB002EC32A /* Foundation.framework */; };
 		4418E65F17AD1BE0002EC32A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4418E65C17AD1BD6002EC32A /* SenTestingKit.framework */; };
-		4418E66317AD1C96002EC32A /* RDHDateAdjustment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4418E66217AD1C96002EC32A /* RDHDateAdjustment.m */; };
-		4418E66417AD1C96002EC32A /* RDHDateAdjustment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4418E66217AD1C96002EC32A /* RDHDateAdjustment.m */; };
+		4418E66517AD22B8002EC32A /* RDHDateAdjustment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4418E66217AD1C96002EC32A /* RDHDateAdjustment.m */; };
+		4418E66617AD22BA002EC32A /* RDHDateAdjustment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4418E66217AD1C96002EC32A /* RDHDateAdjustment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -212,7 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4418E63717AD1ADB002EC32A /* main.m in Sources */,
-				4418E66317AD1C96002EC32A /* RDHDateAdjustment.m in Sources */,
+				4418E66517AD22B8002EC32A /* RDHDateAdjustment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4418E65717AD1BA6002EC32A /* RDHDateAdjustmentTests.m in Sources */,
-				4418E66417AD1C96002EC32A /* RDHDateAdjustment.m in Sources */,
+				4418E66617AD22BA002EC32A /* RDHDateAdjustment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
