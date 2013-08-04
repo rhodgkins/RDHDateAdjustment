@@ -28,6 +28,10 @@ static NSCalendarUnit const RDH_CALENDAR_UNITS[] = {
     NSTimeZoneCalendarUnit
 };
 
+static NSCalendarUnit const RDHAllCalendarUnits = ~((NSCalendarUnit) 0);
+
+#define RDHCurrentCalendar ([NSCalendar currentCalendar])
+
 @implementation NSDate (RDHDateComponentsCreation)
 
 +(instancetype)dateWithCalendar:(NSCalendar *)calendar fromDateComponentsDictionary:(NSDictionary *)dict
@@ -39,18 +43,18 @@ static NSCalendarUnit const RDH_CALENDAR_UNITS[] = {
 
 +(instancetype)dateWithCurrentCalendarFromDateComponentsDictionary:(NSDictionary *)dict
 {
-    return [self dateWithCalendar:[NSCalendar currentCalendar] fromDateComponentsDictionary:dict];
+    return [self dateWithCalendar:RDHCurrentCalendar fromDateComponentsDictionary:dict];
 }
 
 -(NSDateComponents *)dateComponentsWithCalendar:(NSCalendar *)calendar
 {
     // All components
-    return [calendar components:~0 fromDate:self];
+    return [calendar components:RDHAllCalendarUnits fromDate:self];
 }
 
 -(NSDateComponents *)dateComponentsWithCurrentCalendar
 {
-    return [self dateComponentsWithCalendar:[NSCalendar currentCalendar]];
+    return [self dateComponentsWithCalendar:RDHCurrentCalendar];
 }
 
 @end
@@ -87,7 +91,7 @@ static BOOL RDHValidateSingleUnit(NSCalendarUnit unitToValidate)
 
 -(instancetype)dateByUsingCurrentCalendarToAdjustCalendarUnit:(NSCalendarUnit)unit withValue:(NSInteger)value
 {
-    return [self dateByUsingCalendar:[NSCalendar currentCalendar] toAdjustCalendarUnit:unit withValue:value];
+    return [self dateByUsingCalendar:RDHCurrentCalendar toAdjustCalendarUnit:unit withValue:value];
 }
 
 -(instancetype)dateByUsingCalendar:(NSCalendar *)calendar toAddDateComponentsDictionary:(NSDictionary *)dict
@@ -98,13 +102,13 @@ static BOOL RDHValidateSingleUnit(NSCalendarUnit unitToValidate)
 
 -(instancetype)dateByUsingCurrentCalendarToAddDateComponentsDictionary:(NSDictionary *)dict
 {
-    return [self dateByUsingCalendar:[NSCalendar currentCalendar] toAddDateComponentsDictionary:dict];
+    return [self dateByUsingCalendar:RDHCurrentCalendar toAddDateComponentsDictionary:dict];
 }
 
 -(instancetype)dateOfStartOfDayUsingCalendar:(NSCalendar *)calendar
 {
     // All components
-    NSCalendarUnit units = ~0;
+    NSCalendarUnit units = RDHAllCalendarUnits;
     // Then unset hour, minute and second
     units ^= NSHourCalendarUnit;
     units ^= NSMinuteCalendarUnit;
@@ -114,7 +118,7 @@ static BOOL RDHValidateSingleUnit(NSCalendarUnit unitToValidate)
 
 -(instancetype)dateOfStartOfDayUsingCurrentCalendar
 {
-    return [self dateOfStartOfDayUsingCalendar:[NSCalendar currentCalendar]];
+    return [self dateOfStartOfDayUsingCalendar:RDHCurrentCalendar];
 }
 
 @end
