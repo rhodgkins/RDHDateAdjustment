@@ -5,6 +5,8 @@ RDHDateAdjustment
 - `NSDateComponents` converted to a `NSDictionary` representation for quick use.
 - A date can be 'zeroed' to the start of the day.
 
+If you want to use a different calendar, other than `[NSCalendar currentCalendar]`, the methods all have a similar method where a `NSCalendar` can be passed in.
+
 Single component manipulation
 -----------------------------
 Instead of this:
