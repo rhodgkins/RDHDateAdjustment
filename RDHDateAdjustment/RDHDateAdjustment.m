@@ -28,6 +28,7 @@ static NSCalendarUnit const RDH_CALENDAR_UNITS[] = {
     NSTimeZoneCalendarUnit
 };
 
+/// All the `NSCalendarUnit` enums.
 static NSCalendarUnit const RDHAllCalendarUnits = ~((NSCalendarUnit) 0);
 
 #define RDHCurrentCalendar ([NSCalendar currentCalendar])
@@ -61,6 +62,7 @@ static NSCalendarUnit const RDHAllCalendarUnits = ~((NSCalendarUnit) 0);
 
 @implementation NSDate (RDHDateAdjustment)
 
+/// Checks to see if only one unit has been set
 static BOOL RDHValidateSingleUnit(NSCalendarUnit unitToValidate)
 {
     BOOL foundUnit = NO;
