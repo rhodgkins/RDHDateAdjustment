@@ -18,13 +18,13 @@
  * @param calendar the calender to use for creating a date.
  * @param dict the dictionary representation of the date components for the date you want to create.
  * @returns a date set to the specificed components.
- * @see NSDateComponents#dictionaryRepresentation
+ * @see -[NSDateComponents dictionaryRepresentation]
  */
 +(instancetype)dateWithCalendar:(NSCalendar *)calendar fromDateComponentsDictionary:(NSDictionary *)dict;
 
 /**
- * Creates a date with the NSCalendar#currentCalendar from a dictionary representation of NSDateComponents.
- * @see #dateWithCalendar:fromDateComponentsDictionary:
+ * Creates a date with the `+[NSCalendar currentCalendar]` from a dictionary representation of NSDateComponents.
+ * @see dateWithCalendar:fromDateComponentsDictionary:
  */
 +(instancetype)dateWithCurrentCalendarFromDateComponentsDictionary:(NSDictionary *)dict;
 
@@ -35,8 +35,8 @@
 -(NSDateComponents *)dateComponentsWithCalendar:(NSCalendar *)calendar;
 
 /**
- * @returns the date components of the receiver using the NSCalendar#currentCalendar.
- * @see #dateComponentsWithCalendar:
+ * @returns the date components of the receiver using the `+[NSCalendar currentCalendar]`.
+ * @see dateComponentsWithCalendar:
  */
 -(NSDateComponents *)dateComponentsWithCurrentCalendar;
 
@@ -53,13 +53,13 @@
  * @param unit a __single__ `NSCalendarUnit` to adjust.
  * @param value the value to adjust the unit by, this can be a negative value to decrement the unit.
  * @returns a date by adding the value of the component to the receiver.
- * @see #dateByUsingCalendar:toAddDateComponentsDictionary:
+ * @see dateByUsingCalendar:toAddDateComponentsDictionary:
  */
 -(instancetype)dateByUsingCalendar:(NSCalendar *)calendar toAdjustCalendarUnit:(NSCalendarUnit)unit withValue:(NSInteger)value;
 
 /**
- * Uses the NSCalendar#currentCalendar for calculations.
- * @see #dateByUsingCalendar:toAdjustCalendarUnit:withValue:
+ * Uses the `+[NSCalendar currentCalendar]` for calculations.
+ * @see dateByUsingCalendar:toAdjustCalendarUnit:withValue:
  */
 -(instancetype)dateByUsingCurrentCalendarToAdjustCalendarUnit:(NSCalendarUnit)unit withValue:(NSInteger)value;
 
@@ -72,8 +72,8 @@
 -(instancetype)dateByUsingCalendar:(NSCalendar *)calendar toAddDateComponentsDictionary:(NSDictionary *)dict;
 
 /**
- * Uses the NSCalendar#currentCalendar for calculations.
- * @see #dateByUsingCalendar:toAddDateComponentsDictionary:
+ * Uses the `+[NSCalendar currentCalendar]` for calculations.
+ * @see dateByUsingCalendar:toAddDateComponentsDictionary:
  */
 -(instancetype)dateByUsingCurrentCalendarToAddDateComponentsDictionary:(NSDictionary *)dict;
 
@@ -89,8 +89,8 @@
 -(instancetype)dateOfStartOfDayUsingCalendar:(NSCalendar *)calendar;
 
 /**
- * Uses the NSCalendar#currentCalendar for calculations.
- * @see #dateOfStartOfDayUsingCalendar:
+ * Uses the `+[NSCalendar currentCalendar]` for calculations.
+ * @see dateOfStartOfDayUsingCalendar:
  */
 -(instancetype)dateOfStartOfDayUsingCurrentCalendar;
 
@@ -110,13 +110,13 @@
  * The keys for the dictionary should be boxed `NSCalendarUnit` enum values.
  * @param dict dictionary of `NSCalendarUnit`s to the component value.
  * @returns the date componets from the dictionary representation.
- * @see #dictionaryRepresentation
+ * @see dictionaryRepresentation
  */
 +(instancetype)dateComponentsWithDictionaryRepresentation:(NSDictionary *)dict;
 
 /**
  * @return a dictionary of `NSCalendarUnit`s and the receivers components.
- * @see #dateComponentsWithDictionaryRepresentation:
+ * @see dateComponentsWithDictionaryRepresentation:
  */
 -(NSDictionary *)dictionaryRepresentation;
 
