@@ -7,6 +7,14 @@ RDHDateAdjustment
 
 If you want to use a different calendar, other than `[NSCalendar currentCalendar]`, the methods all have a similar method where a `NSCalendar` can be passed in.
 
+Documentation
+-------------
+[Online docs](http://cocoadocs.org/docsets/RDHDateAdjustment)
+
+[Docset for xcode](http://cocoadocs.org/docsets/RDHDateAdjustment/xcode-docset.atom)
+
+[Docset for Dash](dash-feed://http%3A%2F%2Fcocoadocs.org%2Fdocsets%2FRDHDateAdjustment%2FRDHDateAdjustment.xml)
+
 Single component manipulation
 -----------------------------
 Instead of this:
