@@ -14,7 +14,7 @@
 @interface NSDate (RDHDateComponentsCreation)
 
 /**
- * Creates a date with the specified calendar from a dictionary representation of NSDateComponents.
+ * Creates a date with the specified calendar from a dictionary representation of `NSDateComponents`.
  * @param calendar the calender to use for creating a date.
  * @param dict the dictionary representation of the date components for the date you want to create.
  * @returns a date set to the specificed components.
@@ -23,7 +23,7 @@
 +(instancetype)dateWithCalendar:(NSCalendar *)calendar fromDateComponentsDictionary:(NSDictionary *)dict;
 
 /**
- * Creates a date with the `+[NSCalendar currentCalendar]` from a dictionary representation of NSDateComponents.
+ * Creates a date with the `+[NSCalendar currentCalendar]` from a dictionary representation of `NSDateComponents`.
  * @see dateWithCalendar:fromDateComponentsDictionary:
  */
 +(instancetype)dateWithCurrentCalendarFromDateComponentsDictionary:(NSDictionary *)dict;
