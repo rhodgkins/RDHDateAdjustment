@@ -79,10 +79,12 @@
 
 /**
  * E.g.:
+ * ```
  *      NSDate *date = [NSDate now];
  *      // date = Tue, 01 Jan 2013 07:22:58 GMT
  *      NSDate *dayDate = [date dateOfStartOfDayUsingCurrentCalendar];
  *      // dayDate = Tue, 01 Jan 2013 00:00:00 GMT
+ * ```
  * @param calendar the calendar to use for the calculation.
  * @returns the date for the start of the day for the receiver.
  */
