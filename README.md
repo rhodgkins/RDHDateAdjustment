@@ -67,7 +67,7 @@ NSDate *adjustedDate = [now dateByUsingCurrentCalendarToAddDateComponentsDiction
 Also creating components can be simplified:
 ``` objective-c
 // To get a NSDateComonents object
-NSDateComponents *comps = [NSDateComponents dateWithCurrentCalendarFromDateComponentsDictionary:@{@(NSYearCalendarUnit) : 1,
+NSDateComponents *comps = [NSDateComponents dateComponentsWithDictionaryRepresentation:@{@(NSYearCalendarUnit) : 1,
                                                                                                   @(NSMonthCalendarUnit) : 7,
                                                                                                   @(NSHourCalendarUnit) : 15,
                                                                                                   @(NSSecondCalendarUnit) : 36}];
